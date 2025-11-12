@@ -1,0 +1,198 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <style>
+    
+    body {
+
+        text-align: center;
+    }
+
+    h1 {
+
+/* TEXT PROPERTIES*/
+
+
+  z-index: 9999;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+
+  text-align: center;
+}
+
+  h2 {
+
+/* TEXT PROPERTIES*/
+
+
+  z-index: 9998;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+
+  text-align: center;
+}
+
+  p {
+
+/* TEXT PROPERTIES*/
+
+
+
+  z-index: 9997;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+
+  text-align: center;
+}
+
+
+/* Button style */
+.button {
+  background-color: #ffe396;
+  border: 1 px inset black;
+  border-radius: 8px;
+  color: black;
+  padding: 6px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 50%;
+  transition: background-color 0.3s ease;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+.button:hover {
+  background-color: #ebcf83;
+
+  border: 1px inset black;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<h1>Conversion</h1>
+
+<html>
+<head>
+
+
+<p>Celsius to Fahrenheit</p>
+
+<form>
+  <label for="i1">Celsius</label>
+  <input type="number" id="i1" name="i1">
+  <button onclick="ctof()">Convert</button>
+
+  <div>
+
+    <label id="fvalue">Value in Fahrenheit:</label>
+</div>
+
+<p>Fahrenheit to Celsius</p>
+
+ <label for="i2">Fahrenheit</label>
+  <input type="number" id="i2" name="i2">
+   <button onclick="ftoc()">Convert</button>
+
+  <div>
+
+      <label id="cvalue">Value in Celsius:</label>
+
+<p>Meters to Feet</p>
+
+ <label for="i3">Meters</label>
+  <input type="number" id="i3" name="i3">
+   <button onclick="mtof()">Convert</button>
+
+  <div>
+
+      <label id="fevalue">Value in Feet:</label>
+
+<p>Feet to Meters</p>
+
+ <label for="i4">Feet</label>
+  <input type="number" id="i4" name="i4">
+   <button onclick="ftom()">Convert</button>
+
+  <div>
+
+      <label id="mvalue">Value in Meters:</label>
+
+</div>
+</form>
+
+<div>
+<a href="index.html" type="button" class="button">Return to Main Page</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+//the good stuff
+
+function ctof(){
+c1 = document.getElementById("i1").value*1;
+output1 =  (c1 * 9/5) + 32;
+document.getElementById("fvalue").innerHTML = "Value in Fahrenheit: " + output1;
+}
+
+function ftoc(){
+c2 = document.getElementById("i2").value*1;
+output2 =  (c2 -32) * 5/9;
+document.getElementById("cvalue").innerHTML = "Value in Celsius: " + output2;
+}
+
+function mtof(){
+c3 = document.getElementById("i3").value*1;
+output3 =  c3 * 3.281;
+document.getElementById("fevalue").innerHTML = "Value in Feet: " + output3;
+}
+
+function ftom(){
+c4 = document.getElementById("i4").value*1;
+output4 =  c4 / 3.281;
+document.getElementById("mvalue").innerHTML = "Value in Meters: " + output4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
